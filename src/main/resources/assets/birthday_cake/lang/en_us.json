@@ -1,3 +1,8 @@
 {
-  "item.birthday_cake.giant_birthday_cake": "Birthday Cake"
+  "item.birthday_cake.giant_birthday_cake": "Birthday Cake",
+  "block.birthday_cake_block_white" : "Birthday Cake Block White",
+  "block.birthday_cake_block_deeporange": "Birthday Cake Block Deep Orange",
+  "block.birthday_cake_block_red": "Birthday Cake Block Red",
+  "birthday_cake_block_gray": "Birthday Cake Block Gray",
+  "birthday_cake_block_orange": "Birthday Cake Block Orange"
 }
