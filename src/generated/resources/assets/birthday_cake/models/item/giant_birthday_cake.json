@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "birthday_cake:item/giant_birthday_cake"
+  }
+}

@@ -10,6 +10,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
@@ -19,12 +21,37 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final String BIRTHDAY_CAKE_WHITE_BLOCK_NAME = "birthday_cake_block_red";
-    public static final RegistryObject<Block> BIRTHDAY_CAKE = register(BIRTHDAY_CAKE_WHITE_BLOCK_NAME, () ->
-            new BirthdayCakeBlock(AbstractBlock.Properties.create(Material.ROCK).
+    public static final String BIRTHDAY_CAKE_WHITE_BLOCK_NAME = "birthday_cake_block_white";
+    public static final String BIRTHDAY_CAKE_DEEPORANGE_BLOCK_NAME = "birthday_cake_block_deeporange";
+    public static final String BIRTHDAY_CAKE_RED_BLOCK_NAME = "birthday_cake_block_red";
+    public static final String BIRTHDAY_CAKE_GRAY_BLOCK_NAME = "birthday_cake_block_gray";
+    public static final String BIRTHDAY_CAKE_ORANGE_BLOCK_NAME = "birthday_cake_block_orange";
+
+    public static final RegistryObject<Block> BIRTHDAY_CAKE_BLOCK_WHITE = register(BIRTHDAY_CAKE_WHITE_BLOCK_NAME, () ->
+            new BirthdayCakeBlock(AbstractBlock.Properties.create(Material.CAKE).
                     hardnessAndResistance(3,10).
                     harvestLevel(1).
-                    sound(SoundType.STONE)));
+                    sound(SoundType.HONEY)));
+    public static final RegistryObject<Block> BIRTHDAY_CAKE_BLOCK_DEEPORANGE = register(BIRTHDAY_CAKE_DEEPORANGE_BLOCK_NAME, () ->
+            new BirthdayCakeBlock(AbstractBlock.Properties.create(Material.CAKE).
+                    hardnessAndResistance(3,10).
+                    harvestLevel(1).
+                    sound(SoundType.HONEY)));
+    public static final RegistryObject<Block> BIRTHDAY_CAKE_BLOCK_RED = register(BIRTHDAY_CAKE_RED_BLOCK_NAME, () ->
+            new BirthdayCakeBlock(AbstractBlock.Properties.create(Material.CAKE).
+                    hardnessAndResistance(3,10).
+                    harvestLevel(1).
+                    sound(SoundType.HONEY)));
+    public static final RegistryObject<Block> BIRTHDAY_CAKE_BLOCK_GRAY = register(BIRTHDAY_CAKE_GRAY_BLOCK_NAME, () ->
+            new BirthdayCakeBlock(AbstractBlock.Properties.create(Material.CAKE).
+                    hardnessAndResistance(3,10).
+                    harvestLevel(1).
+                    sound(SoundType.HONEY)));
+    public static final RegistryObject<Block> BIRTHDAY_CAKE_BLOCK_ORANGE = register(BIRTHDAY_CAKE_ORANGE_BLOCK_NAME, () ->
+            new BirthdayCakeBlock(AbstractBlock.Properties.create(Material.CAKE).
+                    hardnessAndResistance(3,10).
+                    harvestLevel(1).
+                    sound(SoundType.HONEY)));
 
     private static<T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
         return Registration.BLOCKS.register(name, block);
