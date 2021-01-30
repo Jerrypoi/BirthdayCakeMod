@@ -1,5 +1,6 @@
 package com.jerrypoi.birthday_cake;
 
+import com.jerrypoi.birthday_cake.setup.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,6 +27,8 @@ public class BirthdayCakeMod {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public BirthdayCakeMod() {
+        Registration.register();
+
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -72,7 +75,7 @@ public class BirthdayCakeMod {
         LOGGER.info("HELLO from server starting");
     }
 
-    // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
+/*    // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
@@ -81,5 +84,5 @@ public class BirthdayCakeMod {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
         }
-    }
+    }*/
 }
